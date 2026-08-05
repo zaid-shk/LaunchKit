@@ -11,11 +11,14 @@ import { askType } from "../prompts/type.js";
 import { installDependecies } from "./installDependecies.js";
 
 export async function createProject() {
-  const s = spinner();
+  // const s = spinner();
 
   const projectName = await askProjectName();
   const language = await askLanguage();
   const type = await askType();
+
+  console.log(type);
+  
 
   if (!projectName) {
     console.error("Please provide a project name.");
@@ -27,10 +30,10 @@ export async function createProject() {
     process.exit(1);
   }
 
-  s.start("Creating project");
+  // s.start("Creating project");
 
   copyTemplate(projectName, language, type);
-  s.stop("Project Created");
+  // s.stop("Project Created");
 
   const dependencies = await installDependecies();
 

@@ -6,11 +6,11 @@ export async function askType() {
     options: [
       {
         label: "ES commonjs (require/module.exports)",
-        value: "commonjs",
+        value: "cjs",
       },
       {
         label: "module  (import / export)",
-        value: "module",
+        value: "esm",
       },
     ],
   });
