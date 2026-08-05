@@ -302,7 +302,7 @@ Distributed under the **MIT License**. See [LICENSE](./LICENSE) for full details
 
 **Zaid Shaikh**
 
-[![GitHub](https://img.shields.io/badge/GitHub-zaidshk04-181717?style=flat-square&logo=github)](https://github.com/zaidshk04)
+[![GitHub](https://img.shields.io/badge/GitHub-zaidshk04-181717?style=flat-square&logo=github)](https://github.com/zaid-shk)
 [![npm](https://img.shields.io/badge/npm-@zaidshk04-CB3837?style=flat-square&logo=npm)](https://www.npmjs.com/~zaidshk04)
 
 ---
