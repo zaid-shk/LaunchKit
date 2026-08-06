@@ -32,13 +32,6 @@ export async function createProject() {
   const language = await askLanguage();
   const type = await askType();
 
-  console.log(type);
-
-
-
-  // s.start("Creating project");
-
-  console.log(language);
 
   copyTemplate(projectName, language, type);
   // s.stop("Project Created");
