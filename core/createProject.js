@@ -9,16 +9,14 @@ import { askLanguage } from "../prompts/language.js";
 import { updatePackegeJson } from "./updatePackageJson.js";
 import { askType } from "../prompts/type.js";
 import { installDependecies } from "./installDependecies.js";
+import { askDatabase } from "../prompts/dependencies/database.js";
+import { generateTemplate } from "../core/generateTemplate.js";
+
 
 export async function createProject() {
   // const s = spinner();
 
   const projectName = await askProjectName();
-  const language = await askLanguage();
-  const type = await askType();
-
-  console.log(type);
-  
 
   if (!projectName) {
     console.error("Please provide a project name.");
@@ -30,12 +28,24 @@ export async function createProject() {
     process.exit(1);
   }
 
+
+  const language = await askLanguage();
+  const type = await askType();
+
+  console.log(type);
+
+
+
   // s.start("Creating project");
+
+  console.log(language);
 
   copyTemplate(projectName, language, type);
   // s.stop("Project Created");
 
   const dependencies = await installDependecies();
+  generateTemplate(projectName, language, dependencies)
+
 
   updatePackegeJson(projectName, type, dependencies);
 
