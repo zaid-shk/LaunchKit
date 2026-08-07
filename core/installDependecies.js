@@ -5,7 +5,7 @@ import {
   askValidation,
 } from "../prompts/dependencies/index.js";
 
-export async function installDependecies() {
+export async function installDependecies(language) {
   const auth = await askAuthentication();
   const database = await askDatabase();
   const orm = await askORM();

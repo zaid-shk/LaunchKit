@@ -5,20 +5,20 @@ export async function askValidation() {
     message: "Choose Validation",
     options: [
       {
-        value: "zod",
         label: "Zod",
+        value: "zod",
       },
       {
-        value: "joi",
         label: "Joi",
+        value: "joi",
       },
       {
-        value: "express-validator",
         label: "Express Validator",
+        value: "express-validator",
       },
       {
-        value: "none",
         label: "None",
+        value: "none",
       },
     ],
   });
