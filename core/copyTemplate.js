@@ -6,19 +6,19 @@ export function copyTemplate(projectName, language, type) {
 
   let template;
 
-  if (language === "js" && type === "cjs") {
+  if (language === "js" && type === "commonjs") {
     template = "js-cjs";
   }
 
-  if (language === "js" && type === "esm") {
+  if (language === "js" && type === "module") {
     template = "js-esm";
   }
 
-  if (language === "ts" && type === "cjs") {
+  if (language === "ts" && type === "commonjs") {
     template = "ts-cjs";
   }
 
-  if (language === "ts" && type === "esm") {
+  if (language === "ts" && type === "module") {
     template = "ts-esm";
   }
 
