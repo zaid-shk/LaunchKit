@@ -8,10 +8,11 @@ export function getTemplatePath(template) {
 
   return path.join(__dirname, "..", "template", "base", template);
 }
-export function getModulePath(category, module, language) {
+export function getModulePath(category, module, language, type) {
 
   const __filename = fileURLToPath(import.meta.url);
   const __dirname = path.dirname(__filename);
+  const langFolder = language === "js" && type === "commonjs" ? "js-cjs" : language;
   return path.join(
     __dirname,
     "..",
@@ -19,7 +20,7 @@ export function getModulePath(category, module, language) {
     "modules",
     category,
     module,
-    language
+    langFolder
   );
 }
 

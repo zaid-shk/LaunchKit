@@ -37,7 +37,7 @@ export async function createProject() {
   // s.stop("Project Created");
 
   const dependencies = await installDependecies();
-  generateTemplate(projectName, language, dependencies)
+  generateTemplate(projectName, language, dependencies, type)
 
 
   updatePackegeJson(projectName, type, dependencies);

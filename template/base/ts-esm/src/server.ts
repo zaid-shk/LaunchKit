@@ -1,9 +1,9 @@
-import express from "express";
+import  app from './app.ts'
+
 import dotenv from "dotenv";
 
 dotenv.config();
 
-const app = express();
 
 const PORT: number = Number(process.env.PORT) || 3000;
 

@@ -5,8 +5,14 @@ import { database } from "./database.js";
 import { auth } from "./auth.js";
 import { validate } from "./validation.js";
 
-export async function generateTemplate(projectName, language, dependencies) {
-    await database(projectName, dependencies, language)
-    await auth(projectName, dependencies, language)
-    await validate(projectName, dependencies, language)
+export async function generateTemplate(projectName, language, dependencies, type) {
+    if (dependencies.database !== "none") {
+        await database(projectName, dependencies, language, type)
+    }
+    if (dependencies.auth !== "none") {
+        await auth(projectName, dependencies, language, type)
+    }
+    if (dependencies.validation !== "none") {
+        await validate(projectName, dependencies, language, type)
+    }
 }
